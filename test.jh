@@ -1,0 +1,27 @@
+
+entity Author {
+	firstName String,
+    lastName String
+}
+
+entity Book {
+	title String,
+    isbn String
+}
+
+entity Publisher {
+	name String,
+    addressLine1 String,
+    city String,
+    state String,
+    zip String
+}
+
+relationship OneToMany {
+	Publisher to Book {publisher}
+}
+
+relationship ManyToMany {
+	Author to Book {book}
+}
+
